@@ -19,10 +19,8 @@ const Home = ({navigation}) => {
   const error = useSelector(state => state.episode.error);
   const nextPage = useSelector(state => state.episode.page);
   const hasNextPage = useSelector(state => state.episode.hasNextPage);
-
   useEffect(() => {
     dispatch(fetchEpisodes());
-    console.log('episodes', episodes);
   }, []);
 
   return (

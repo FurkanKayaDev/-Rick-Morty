@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  cart: {
+  card: {
     backgroundColor: '',
     marginVertical: 10,
     borderWidth: 1,

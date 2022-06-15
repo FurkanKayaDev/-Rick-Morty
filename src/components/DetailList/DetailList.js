@@ -7,25 +7,30 @@ const DetailList = ({navigation, details}) => {
     navigation.navigate('Characters', {url});
   };
   return (
-    <View>
-      <ScrollView>
+    <ScrollView>
+      <View key={details.id}>
         <Text style={styles.name}>{details.episode}</Text>
         <Text style={styles.name}>Name: {details.name}</Text>
         <Text style={styles.name}>Date: {details.air_date}</Text>
         <Text style={styles.name}>Characters</Text>
-        {details.characters.map(character => {
+        {details?.characters?.map(character => {
           return (
             <TouchableOpacity
               key={details.characters.index}
               onPress={() => hadleGoToDetail(character)}>
               <Text key={character} style={styles.card}>
-                {character}
+                Character id:{' '}
+                {
+                  character
+                    .split('/')
+                    [character.split('/').length - 1].split('?')[0]
+                }
               </Text>
             </TouchableOpacity>
           );
         })}
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 

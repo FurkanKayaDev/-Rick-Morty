@@ -5,7 +5,7 @@ import DetailList from '../../components/DetailList';
 const Detail = ({navigation, route}) => {
   const {details} = route.params;
   return (
-    <View>
+    <View key={details.id}>
       <DetailList details={details} navigation={navigation} />
     </View>
   );
