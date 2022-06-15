@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
   cart: {
     backgroundColor: '',
     marginVertical: 10,
-    marginHorizontal: 10,
     borderWidth: 1,
     borderColor: 'white',
     padding: 10,
@@ -25,6 +24,12 @@ const styles = StyleSheet.create({
     width: width / 1.8,
     borderRadius: 10,
     alignItems: 'center',
+  },
+  item_text: {
+    fontSize: 14,
+    textAlign: 'center',
+    color: 'black',
+    marginVertical: 5,
   },
 });
 

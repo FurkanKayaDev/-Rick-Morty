@@ -12,7 +12,7 @@ import {fetchEpisodes} from '../../redux/episodeSlice/episodeSlice';
 import styles from './Home.styles';
 import Episodes from '../../components/Episodes';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const dispatch = useDispatch();
   const episodes = useSelector(state => state.episode.episodes);
   const loading = useSelector(state => state.episode.loading);
@@ -38,7 +38,9 @@ const Home = () => {
           <Text style={styles.header}>Rick and Morty Episodes</Text>
         </View>
         {episodes.map(episode => {
-          return <Episodes item={episode} key={episode.id} />;
+          return (
+            <Episodes item={episode} key={episode.id} navigation={navigation} />
+          );
         })}
         {loading && <Text>Loading...</Text>}
         {hasNextPage && (

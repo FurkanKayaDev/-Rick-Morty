@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from './screens/Home';
 import Detail from './screens/Detail';
+import Characters from './screens/Characters';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -21,6 +22,7 @@ const App = () => {
           }}
         />
         <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen name="Characters" component={Characters} />
       </Stack.Navigator>
     </NavigationContainer>
   );
