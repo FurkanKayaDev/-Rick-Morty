@@ -37,11 +37,17 @@ const Home = ({navigation}) => {
         <View>
           <Text style={styles.header}>Rick and Morty Episodes</Text>
         </View>
-        {episodes?.map(episode => {
-          return (
-            <Episodes item={episode} key={episode.id} navigation={navigation} />
-          );
-        })}
+        <View style={styles.container}>
+          {episodes?.map(episode => {
+            return (
+              <Episodes
+                item={episode}
+                key={episode.id}
+                navigation={navigation}
+              />
+            );
+          })}
+        </View>
         {loading && <ActivityIndicator size={30} />}
         {hasNextPage && (
           <TouchableOpacity onPress={() => dispatch(fetchEpisodes(nextPage))}>

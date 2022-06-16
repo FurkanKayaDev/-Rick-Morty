@@ -3,11 +3,9 @@ const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: 'column',
-    marginVertical: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: width / 2.4,
+    margin: 3,
+    borderRadius: 10,
   },
   card: {
     backgroundColor: '',
@@ -20,15 +18,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 2,
     elevation: 3,
-    backgroundColor: '#fff',
-    width: width / 1.8,
+    backgroundColor: '#3e4a5b',
+    width: width / 2.4,
     borderRadius: 10,
     alignItems: 'center',
   },
   item_text: {
     fontSize: 14,
     textAlign: 'center',
-    color: 'black',
+    color: 'white',
     marginVertical: 5,
   },
 });

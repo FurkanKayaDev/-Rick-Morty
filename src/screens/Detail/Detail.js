@@ -34,7 +34,7 @@ const Detail = ({navigation, route}) => {
               style={styles.card}
               key={character.split('/')[character.split('/').length - 1]}
               onPress={() => hadleGoToDetail(character)}>
-              <Text style={styles.name}>
+              <Text style={styles.character_name}>
                 Character ID:{' '}
                 {character.split('/')[character.split('/').length - 1]}
               </Text>

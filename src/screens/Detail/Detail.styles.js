@@ -15,8 +15,15 @@ const styles = StyleSheet.create({
     color: 'black',
     marginVertical: 5,
   },
+  character_name: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'white',
+    marginVertical: 5,
+  },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#3e4a5b',
     padding: 10,
     borderRadius: 10,
     shadowColor: '#000',

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 17,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#3e4a5b',
     padding: 10,
     borderRadius: 10,
     marginVertical: 10,
@@ -58,6 +58,12 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     padding: 5,
     borderColor: 'gray',
+  },
+  card_text: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: 'white',
+    marginVertical: 5,
   },
 });
 

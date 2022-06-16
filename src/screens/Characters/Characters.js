@@ -47,8 +47,10 @@ const Character = ({route, navigation}) => {
           </Text>
           {character?.episode?.map(episode => {
             return (
-              <View key={episode.split('/')[episode.split('/').length - 1]}>
-                <Text style={styles.card}>
+              <View
+                style={styles.card}
+                key={episode.split('/')[episode.split('/').length - 1]}>
+                <Text style={styles.card_text}>
                   Episode: {episode.split('/')[episode.split('/').length - 1]}
                 </Text>
               </View>
