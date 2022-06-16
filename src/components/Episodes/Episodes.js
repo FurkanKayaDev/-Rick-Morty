@@ -6,7 +6,6 @@ const Episodes = ({item, navigation}) => {
   hadleGoToDetail = details => {
     navigation.navigate('Detail', {details});
   };
-  console.log('aaaaaaaaaaaa', item);
   return (
     <View style={styles.container}>
       <TouchableOpacity

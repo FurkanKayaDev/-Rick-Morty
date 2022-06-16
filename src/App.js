@@ -17,12 +17,38 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Detail"
+          component={Detail}
           options={{
-            headerShown: false,
+            title: 'Episode Details',
+            headerStyle: {
+              backgroundColor: 'orange',
+            },
+            headerTintColor: 'white',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            headerTitleAlign: 'center',
           }}
         />
-        <Stack.Screen name="Detail" component={Detail} />
-        <Stack.Screen name="Characters" component={Characters} />
+        <Stack.Screen
+          name="Characters"
+          component={Characters}
+          options={{
+            title: 'Character Details',
+            headerStyle: {
+              backgroundColor: 'orange',
+            },
+            headerTintColor: 'white',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            headerTitleAlign: 'center',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -47,12 +47,11 @@ const Character = ({route, navigation}) => {
           </Text>
           {character?.episode?.map(episode => {
             return (
-              <TouchableOpacity
-                onPress={() => console.log('bbbbbbbbb', episode)}>
+              <View key={episode.split('/')[episode.split('/').length - 1]}>
                 <Text style={styles.card}>
                   Episode: {episode.split('/')[episode.split('/').length - 1]}
                 </Text>
-              </TouchableOpacity>
+              </View>
             );
           })}
         </View>

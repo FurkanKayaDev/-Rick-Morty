@@ -5,6 +5,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
@@ -19,6 +20,7 @@ const Home = ({navigation}) => {
   const error = useSelector(state => state.episode.error);
   const nextPage = useSelector(state => state.episode.page);
   const hasNextPage = useSelector(state => state.episode.hasNextPage);
+
   useEffect(() => {
     dispatch(fetchEpisodes());
   }, []);
@@ -35,12 +37,12 @@ const Home = ({navigation}) => {
         <View>
           <Text style={styles.header}>Rick and Morty Episodes</Text>
         </View>
-        {episodes.map(episode => {
+        {episodes?.map(episode => {
           return (
             <Episodes item={episode} key={episode.id} navigation={navigation} />
           );
         })}
-        {loading && <Text>Loading...</Text>}
+        {loading && <ActivityIndicator size={30} />}
         {hasNextPage && (
           <TouchableOpacity onPress={() => dispatch(fetchEpisodes(nextPage))}>
             <Text style={styles.load_more}>Load More ({nextPage})</Text>
