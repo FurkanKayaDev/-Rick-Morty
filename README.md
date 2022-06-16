@@ -11,9 +11,7 @@
 
 * Api üzerinden bölüm ve karakter bilgilerine ulaşma 
 
-
-https://user-images.githubusercontent.com/103508575/174105587-e22e2751-1c76-4b38-8b64-70d24ba4c860.mp4
-
+https://user-images.githubusercontent.com/103508575/174120626-f1ed959b-a11f-4584-ac32-91c85a6cb127.mp4
 
 
 ## Başlangıç
