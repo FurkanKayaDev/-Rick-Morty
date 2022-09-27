@@ -27,7 +27,7 @@ const Character = ({route, navigation}) => {
         <Image style={styles.image} source={{uri: character.image}} />
         <View style={styles.container}>
           <Text style={styles.title_text}>
-            <Text style={styles.title_answer}>Name : </Text>
+            <Text style={styles.title_answer}>Name: </Text>
             {character.name}
           </Text>
           <Text style={styles.title_text}>
